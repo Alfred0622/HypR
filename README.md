@@ -69,3 +69,15 @@ HypR follows the license of these 4 datasets. It is free to use for academic pur
   pages={5206-5210},
   doi={10.1109/ICASSP.2015.7178964}}
 ```
+---
+If you find our work useful, please cite
+```
+@misc{wang2023hypr,
+      title={HypR: A comprehensive study for ASR hypothesis revising with a reference corpus}, 
+      author={Yi-Wei Wang and Ke-Han Lu and Kuan-Yu Chen},
+      year={2023},
+      eprint={2309.09838},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
