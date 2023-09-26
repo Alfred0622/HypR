@@ -34,10 +34,10 @@ Example
 }
 ```
 
-Following the default settings of ESPNet toolkit, the `att_score`, `ctc_score`, and `lm_score` in HypR are calculated by summing the log-probability score of every token in the hypothesis with the natural logarithm base. The final score is calculated using the following formula:
+Following the default settings of the ESPNet toolkit, the `att_score`, `ctc_score`, and `lm_score` in HypR are calculated by summing the log-probability score of every token in the hypothesis with the natural logarithm base. The final score is computed by:
 $`\text{score} = [(1 - \lambda_{CTC}) \times \text{att\_score} + \lambda_{CTC}\times\text{ctc\_score}] + \lambda_{LM} \times \text{lm\_score}`$
 
-The values of $\lambda_{CTC}$ and $\lambda_{LM}$ for each dataset are listed below:
+The hyperparameters of $\lambda_{CTC}$ and $\lambda_{LM}$ for each dataset are listed below:
 
 
 | Dataset | AISHELL-1 | TED-LIUM 2 | LibriSpeech |
@@ -68,7 +68,7 @@ dataset = load_dataset("ASR-HypR/LibriSpeech_withoutLM", split="dev_clean")
 
 
 ## Licence
-The HypR dataset is built upon data from the Librispeech, TED-LIUM, and AISHELL corpus, and we respect the licenses associated with these sources. This dataset is freely available for academic purposes, but for commercial use, please consult the original licenses from these datsets.
+HypR is built upon data from the Librispeech, TED-LIUM, and AISHELL corpora, and we respect the licenses associated with these sources. HypR is freely available for academic purposes, but please consult the original licenses from these datasets for commercial use.
 
 ## Citation
 If you find our work useful, please cite our paper:
