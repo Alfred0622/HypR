@@ -34,9 +34,7 @@ Example
 }
 ```
 The `att_score`, `ctc_score`, and `lm_score` in HypR are calculated by summing the log-probability score of every token in the hypothesis with the natural logarithm base. The final score is calculated using the following formula:
-$$
-\text{score} = [(1 - \lambda_{CTC})\times\text{att_score} + \lambda_{CTC}\times\text{ctc_score}] + \lambda_{LM}\times\text{lm_score}
-$$
+$\text{score} = [(1 - \lambda_{CTC})\times\text{att_score} + \lambda_{CTC}\times\text{ctc_score}] + \lambda_{LM}\times\text{lm_score}$
 
 The values of $\lambda_{CTC}$ and $\lambda_{LM}$ for each dataset are listed below:
 
