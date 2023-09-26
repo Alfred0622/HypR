@@ -34,6 +34,17 @@ Example
 }
 ```
 
+The `att_score`, `ctc_score`, and `lm_score` in HypR are calculated by summing the log-probability score of every token in the hypothesis with the natural logarithm base. The final score is calculated using the following formula:
+$`\text{score} = [(1 - \lambda_{CTC}) \times \text{att\_score} + \lambda_{CTC}\times\text{ctc\_score}] + \lambda_{LM} \times \text{lm\_score}`$
+
+The values of $\lambda_{CTC}$ and $\lambda_{LM}$ for each dataset are listed below:
+
+
+| Dataset | AISHELL-1 | TED-LIUM 2 | LibriSpeech |
+| --------| -------- | -------- | -------- |
+| $\lambda_{CTC}$     | 0.5     | 0.3     | 0.4     |
+| $\lambda_{LM}$     | 0.7     | 0.5     | 0.7     |
+
 ### Download
 
 We have made [HypR](https://huggingface.co/ASR-HypR) accessible via the Huggingface Datasets platform. To explore advanced usage, please refer to the [official tutorial](https://huggingface.co/docs/datasets/index). 
